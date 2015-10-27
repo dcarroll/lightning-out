@@ -1,0 +1,25 @@
+{
+  "name": "lightning-out-es6",
+  "version": "1.0.0",
+  "description": "Lightning out ECMAScript6 Package",
+  "main": "lightning-out-es6.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developerforce/lightning-out.git"
+  },
+  "keywords": [
+    "lightning-out"
+  ],
+  "author": "Dave Carroll",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/developerforce/lightning-out/issues"
+  },
+  "homepage": "https://github.com/developerforce/lightning-out#readme"
+}
