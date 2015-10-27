@@ -1,12 +1,14 @@
 {
-  "name": "lightning-out-es6",
-  "version": "1.0.0",
+  "name": "lightning-out",
+  "version": "1.0.4",
   "description": "Lightning out ECMAScript6 Package",
-  "main": "lightning-out-es6.js",
+  "main": "lib/lightning-out.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "build-lib": "babel src -o lib/lightning-out.js",
+    "prepublish": "npm run build-lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +20,9 @@
   ],
   "author": "Dave Carroll",
   "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.8.23"
+  },
   "bugs": {
     "url": "https://github.com/developerforce/lightning-out/issues"
   },

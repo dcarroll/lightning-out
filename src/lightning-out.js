@@ -148,7 +148,7 @@ let addStyle = url => {
 	head.appendChild(link);
 };
 
-export printMsg = () => {
+export let printMsg = () => {
   console.log("This is a message from the demo package");
 };
 
@@ -167,4 +167,3 @@ export let lightningLoaded = () => {
 		_pendingReadyRequests[n]();
 	}
 };
-`
