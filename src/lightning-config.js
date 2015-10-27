@@ -5,6 +5,8 @@ import * as lightningOut from 'lightning-out';
 // targetElementId - Id of the element in which to render the app
 let lightningOutConfig;
 
+let _lightningReady = false;
+
 export let init = (config) => {
 	if (!config) {
 		throw new ReferenceError("Missing config for 'init' function.", "lightning-config.js", 9);
@@ -16,8 +18,6 @@ export let init = (config) => {
 		lightningOutConfig = config;
 	}
 }
-
-let _lightningReady = false;
 
 export let createComponent = (type, attributes, locator, callback) => {
 	if (lightningOutConfig) {

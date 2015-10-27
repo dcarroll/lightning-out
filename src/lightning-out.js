@@ -56,14 +56,6 @@ export let use = (applicationTag, callback, lightningEndPointURI, authToken) => 
 	}
 };
 
-let ready = (callback) => {
-	if (_ready) {
-		$A.run(callback);
-	} else {
-		_pendingReadyRequests.push(callback);
-	}
-};
-
 export let createComponent = (type, attributes, locator, callback) => {
 	// Check to see if we know about the component - enforce aura:dependency
 	// is used to avoid silent performance killer
@@ -118,6 +110,14 @@ export let createComponent = (type, attributes, locator, callback) => {
 	}
 };
 
+let ready = (callback) => {
+	if (_ready) {
+		$A.run(callback);
+	} else {
+		_pendingReadyRequests.push(callback);
+	}
+};
+
 let addScripts = (urls, onload) => {
 	var url = urls[0];
 	urls = urls.slice(1);
@@ -148,11 +148,7 @@ let addStyle = url => {
 	head.appendChild(link);
 };
 
-export let printMsg = () => {
-  console.log("This is a message from the demo package");
-};
-
-export let lightningLoaded = () => {
+let lightningLoaded = () => {
 	_ready = true;
 
 	// DCHASMAN TODO Add auraErrorMessage UI - figure out a better way to
